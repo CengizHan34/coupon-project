@@ -1,0 +1,153 @@
+{
+	"info": {
+		"_postman_id": "9f832134-2e4b-4a63-a3c3-5cca9e379025",
+		"name": "Bilyoner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cancel Coupon",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/api/coupon/16",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"coupon",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Coupons According to Status ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/api/coupon/coupon-status?couponStatus=PLAYED",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"coupon",
+						"coupon-status"
+					],
+					"query": [
+						{
+							"key": "couponStatus",
+							"value": "PLAYED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Coupons by UserId ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/api/coupon/played-coupons/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"coupon",
+						"played-coupons",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9091/api/event/all",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"event",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Play Coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\" :1,\n    \"couponIds\" : [16]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/api/coupon/play-coupon",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"coupon",
+						"play-coupon"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Coupon",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"eventIds\" : [3,1,2]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9091/api/coupon",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"api",
+						"coupon"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
